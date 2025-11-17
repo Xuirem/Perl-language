@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $balance = 0;
+
+sub deposit { my ($amount) = @_; $balance += $amount }
+sub withdraw { my ($amount) = @_; $balance -= $amount if $amount <= $balance }
+
+deposit(100);
+withdraw(30);
+print "$balance\n";
