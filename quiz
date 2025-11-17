@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my %question = ( question => "Capital of France?", answer => "Paris" );
+
+sub check_answer { my ($input) = @_; print $input eq $question{answer} ? "Correct\n" : "Wrong\n" }
+
+check_answer("Paris");
+check_answer("London");
